@@ -1,0 +1,35 @@
+server: 
+  port: 8002
+
+mybatis: 
+  config-location: "classpath:mybatis/mybatis.cfg.xml"        # mybatis配置文件所在路径
+  mapper-locations: 
+    - "classpath:mybatis/mapper/**/*.xml"                     # mapper映射文件
+  type-aliases-package: com.nett.work.dto          # 别名类所在包
+
+spring: 
+  application: 
+    name: microservicecloud-provider                          #微服务的名字
+  datasource: 
+    #  driver-class-name: org.gjt.mm.mysql.Driver                # mysql驱动包      
+    driver-class-name: com.mysql.jdbc.Driver                # mysql驱动包      
+    type: com.alibaba.druid.pool.DruidDataSource              # 当前数据源操作类型
+    url: "jdbc:mysql://127.0.0.1:3306/xxl_job?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai"                    # 数据库名称
+    username: root
+    password: 123456
+    dbcp2: 
+      initial-size: 5                                         # 初始化连接数
+      max-total: 5                                            # 最大连接数
+      max-wait-millis: 200                                    # 等待连接获取的最大超时时间
+      min-idle: 5
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9002/eureka
+  instance:
+    instance-id: microservicecloud-provider8002
+info: 
+  app.name: microservicecloud-provider
+  company.name: www.lzj.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$

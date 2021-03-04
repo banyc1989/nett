@@ -1,0 +1,6 @@
+server: 
+  port: 7003
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9002/eureka
