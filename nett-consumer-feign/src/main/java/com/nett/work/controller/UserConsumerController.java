@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import com.nett.work.Aop.Log;
 import com.nett.work.dto.User;
 import com.nett.work.feignservice.ConsumerService;
 
@@ -26,6 +27,7 @@ public class UserConsumerController {
 	}
 	
 	@RequestMapping(value="/consumer/get/{id}")
+	@Log(operateType="get查询:",operateExplain="查询用户数据")  //这里使用的自定义注解
 	public User get(@PathVariable("id") int id){
 		User user = consumerService.get(id);
 		return user;
