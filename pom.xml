@@ -89,9 +89,8 @@
 	<modules>
 		<module>nett-work</module>
 		<module>nett-eureka1</module>
+		<module>nett-consumer</module>
 	</modules>
-
-
 
 	<repositories>
 		<repository>
