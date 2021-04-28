@@ -24,7 +24,7 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-		
+
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
@@ -76,9 +76,27 @@
 				<version>2.5</version>
 			</dependency>
 			<dependency>
-			    <groupId>com.alibaba</groupId>
-			    <artifactId>druid</artifactId>
-			    <version>1.1.0</version>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>1.1.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger2</artifactId>
+				<version>2.9.2</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger-ui</artifactId>
+				<version>2.9.2</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.xiaoymin</groupId>
+				<artifactId>swagger-bootstrap-ui</artifactId>
+				<version>1.8.7</version>
 			</dependency>
 
 		</dependencies>
@@ -90,6 +108,9 @@
 		<module>nett-work</module>
 		<module>nett-eureka1</module>
 		<module>nett-consumer</module>
+		<module>nett-microservice</module>
+		<module>nett-microservice2</module>
+		<module>nett-consumer-feign</module>
 	</modules>
 
 	<repositories>
@@ -101,34 +122,34 @@
 				<enabled>true</enabled>
 			</releases>
 		</repository>
-		<repository>
-			<id>xyzq</id>
-			<name>xyzq mirror.</name>
-			<url>http://192.20.103.234:8081/nexus/content/groups/public/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
-				<checksumPolicy>warn</checksumPolicy>
-			</snapshots>
-		</repository>
+		<!-- <repository> -->
+		<!-- <id>xyzq</id> -->
+		<!-- <name>xyzq mirror.</name> -->
+		<!-- <url>http://192.20.103.234:8081/nexus/content/groups/public/</url> -->
+		<!-- <releases> -->
+		<!-- <enabled>true</enabled> -->
+		<!-- </releases> -->
+		<!-- <snapshots> -->
+		<!-- <enabled>true</enabled> -->
+		<!-- <updatePolicy>always</updatePolicy> -->
+		<!-- <checksumPolicy>warn</checksumPolicy> -->
+		<!-- </snapshots> -->
+		<!-- </repository> -->
 	</repositories>
 
-	<distributionManagement>
-		<snapshotRepository>
-			<id>nexus-snapshots</id>
-			<name>repo-snapshots</name>
-			<url>http://192.20.103.234:8081/nexus/content/repositories/snapshots/
-			</url>
-		</snapshotRepository>
-		<repository>
-			<id>nexus-releases</id>
-			<name>repo-releases</name>
-			<url>http://192.20.103.234:8081/nexus/content/repositories/releases/
-			</url>
-		</repository>
-	</distributionManagement>
+	<!-- <distributionManagement> -->
+	<!-- <snapshotRepository> -->
+	<!-- <id>nexus-snapshots</id> -->
+	<!-- <name>repo-snapshots</name> -->
+	<!-- <url>http://192.20.103.234:8081/nexus/content/repositories/snapshots/ -->
+	<!-- </url> -->
+	<!-- </snapshotRepository> -->
+	<!-- <repository> -->
+	<!-- <id>nexus-releases</id> -->
+	<!-- <name>repo-releases</name> -->
+	<!-- <url>http://192.20.103.234:8081/nexus/content/repositories/releases/ -->
+	<!-- </url> -->
+	<!-- </repository> -->
+	<!-- </distributionManagement> -->
 
 </project>

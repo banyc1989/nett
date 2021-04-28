@@ -53,7 +53,7 @@ public class LogAopAspect {
 					continue;
 				}
 				Class<?>[] clazzs = methods[i].getParameterTypes();
-				if (clazzs.length == args.length) {
+				if (args.length != 0  && clazzs.length == args.length) {
 					operationType = methods[i].getAnnotation(Log.class).operateType(); // 获取指定类型的注释
 					operateExplain = methods[i].getAnnotation(Log.class).operateExplain();
 					break;
